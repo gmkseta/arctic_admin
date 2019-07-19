@@ -36,6 +36,7 @@ body.active_admin.logged_in {
     border-bottom: 1px solid $header-border-color;
     text-align: center;
     margin: 0;
+    background: $primary-color;
 
     @media screen and (min-width: $sm-width) {
       width: $header-width;

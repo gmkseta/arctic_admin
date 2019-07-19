@@ -4,6 +4,7 @@ $green: #00897B;
 $blue: #4bacfe;
 $black: #36393D;
 $grey: #76838f;
+$livcoral: #FF6F61;
 
 // flash
 $error: #dc4747 !default;
@@ -46,4 +47,6 @@ $text-color-important: #526069 !default;
 
 $box-shadow: 0 0 4px 0 rgba(0,0,0,0.1) !default;
 
-$primary-color: $blue !default;
+$primary-color: $livcoral !default;
+
+$sidebar-color: white !default;
