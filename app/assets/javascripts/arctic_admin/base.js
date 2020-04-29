@@ -1,7 +1,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require active_admin/base
-
 $(function() {
   $(document).on('click touchstart', '#sidebar', function(e) {
     var position = $(this).position();
@@ -26,13 +25,11 @@ $(function() {
       }
     }
   });
-
   var animationDone = true;
   $(document).on('click touchstart', '#utility_nav', function(e) {
     var position = $(this).position();
     var tabs = $('#tabs');
     var width = Math.round(tabs[0].getBoundingClientRect().width);
-
     if (e.pageX < (position.left + 40)) {
       if(animationDone == true) {
         animationDone = false;
@@ -52,7 +49,6 @@ $(function() {
       }
     }
   });
-
   $(document).on('click touchstart', 'body', function(e) {
     var tabs = $('#tabs');
     var width = Math.round(tabs[0].getBoundingClientRect().width);
@@ -69,9 +65,11 @@ $(function() {
       }
     }
   });
-
   $(document).on('click', '#tabs .has_nested', function(e) {
     e.stopPropagation();
+    $('#tabs .has_nested').not(this).removeClass("open").removeClass("current")
+    $('#tabs .has_nested').not(this).find("ul").hide()
     $(this).toggleClass('open');
+    $(this).find('ul').fadeIn();
   });
 });
