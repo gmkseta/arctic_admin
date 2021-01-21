@@ -10,12 +10,11 @@ Gem::Specification.new do |s|
   s.description = "A responsive theme for Active Admin"
   s.authors     = ["Clément Prod'homme"]
   s.files       = Dir["{app,lib}/**/*"] + ["Readme.md", 'LICENCE.txt']
-  s.homepage    = 'https://github.com/cle61/arctic_admin'
+  s.homepage    = 'https://github.com/cprodhomme/arctic_admin'
   s.license     = 'MIT'
   s.require_paths = ["lib"]
   s.add_development_dependency "bundler", "~> 1.5"
   s.add_development_dependency "rake"
-  s.add_dependency 'activeadmin', '~> 2.0'
-  s.add_dependency 'jquery-rails'
-  s.add_dependency 'font-awesome-sass', '~> 5.6.1'
+  s.add_dependency 'activeadmin', ['>= 1.1.0', '< 3.0']
+  s.add_dependency 'font-awesome-sass', '~> 5.0'
 end

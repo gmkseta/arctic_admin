@@ -6,7 +6,7 @@ body.index {
 
   .table_tools {
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: $font-size;
 
     &:after {
       content: '';
@@ -39,6 +39,10 @@ body.index {
       position: absolute;
       z-index: 1;
     }
+
+    .indexes.table_tools_segmented_control {
+      text-align: right;
+    }
   }
 
   .paginated_collection_contents {
@@ -47,7 +51,7 @@ body.index {
   }
 
   #index_footer {
-    font-size: 14px;
+    font-size: $font-size;
   }
 
   .sortable {
@@ -62,7 +66,7 @@ body.index {
       @include transform(translateY(-50%));
 
       @media screen and (min-width: $md-width) {
-        font-size: 14px/1;
+        font-size: $font-size/1;
       }
     }
 
@@ -76,22 +80,35 @@ body.index {
   }
 
   .table_actions {
+    margin-bottom: -4px;
+
     .member_link {
       @include primary-button($primary-color, white);
-      padding: 2px 9px;
+      padding: 4px 8px;
       margin-right: 4px;
+      margin-bottom: 4px;
     }
   }
-  
+
   .scopes {
     .scope {
       @include group-button($primary-color);
+
+      a {
+        margin-right: .25rem;
+      }
     }
   }
 
   #sidebar {
     position: fixed;
+    transition: .5s;
+    transition-timing-function: ease-in-out;
     right: - $filter-width;
+
+    &.sidebar_open {
+      right: 0;
+    }
 
     @media screen and (min-width: $x-lg-width) {
       right: - $lg-filter-width;
